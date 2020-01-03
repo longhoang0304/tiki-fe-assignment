@@ -39,3 +39,8 @@ export const HomeLink = styled(Link)`
 
 export const BoardWrapper = styled.div`
 `;
+
+export const ErrorMsg = styled.div`
+  color: crimson;
+  font-size: 24px;
+`;

@@ -1,17 +1,29 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import {
-  BoardWrapper, Wrapper,
+  BoardWrapper, Wrapper, ErrorMsg,
   HeaderWrapper, RestartBtn, HomeLink,
 } from './Board.styled';
 import Row from '../Row';
 
-const Board = ({ fetchBoard, board, isLoading }) => {
+const Board = ({
+  fetchBoard, board, isLoading, errorMsg,
+}) => {
   useEffect(() => {
     fetchBoard();
 
     return undefined; // no un-sub event
   }, []);
+
+  if (errorMsg) {
+    return (
+      <Wrapper>
+        <ErrorMsg>
+          {`Error: ${errorMsg}`}
+        </ErrorMsg>
+      </Wrapper>
+    );
+  }
 
   if (isLoading) {
     return (
@@ -34,6 +46,10 @@ const Board = ({ fetchBoard, board, isLoading }) => {
   );
 };
 
+Board.defaultProps = {
+  errorMsg: '',
+};
+
 Board.propTypes = {
   fetchBoard: PropTypes.func.isRequired,
   board: PropTypes.arrayOf(
@@ -47,6 +63,7 @@ Board.propTypes = {
     ),
   ).isRequired,
   isLoading: PropTypes.bool.isRequired,
+  errorMsg: PropTypes.string,
 };
 
 export default Board;

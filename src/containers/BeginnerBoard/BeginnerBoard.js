@@ -12,11 +12,13 @@ const AdvantageBoard = () => {
   );
   const board = useShallowEqualSelector(MineSweeperSelectors.getBoard);
   const isLoading = useShallowEqualSelector(MineSweeperSelectors.isLoading);
+  const errorMsg = useShallowEqualSelector(MineSweeperSelectors.getErrorMsg);
 
   return (
     <Board
       board={board}
       isLoading={isLoading}
+      errorMsg={errorMsg}
       fetchBoard={fetchMineSweeperBeginnerBoard}
     />
   );

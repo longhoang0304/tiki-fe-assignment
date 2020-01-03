@@ -67,6 +67,7 @@ const getBoxData = ({ minesweeper }, x, y) => minesweeper.board[x][y];
 const isLoading = ({ minesweeper }) => minesweeper.isLoading;
 const getGameStatus = ({ minesweeper }) => minesweeper.gameStatus;
 const getTimer = ({ minesweeper }) => minesweeper.timer;
+const getErrorMsg = ({ minesweeper }) => minesweeper.errorMsg;
 
 export const selectors = {
   getBoard,
@@ -75,6 +76,7 @@ export const selectors = {
   isLoading,
   getGameStatus,
   getTimer,
+  getErrorMsg,
 };
 
 const initialState = {
