@@ -24,7 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cross-env CI=true react-scripts test --colors",
+    "test": "cross-env CI=true react-scripts test --colors --passWithNoTests",
     "eject": "react-scripts eject"
   },
   "jest": {
