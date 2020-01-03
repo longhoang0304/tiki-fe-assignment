@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { BoardWrapper } from './Board.styled';
+import {
+  BoardWrapper, Wrapper,
+  HeaderWrapper, RestartBtn, HomeLink,
+} from './Board.styled';
 import Row from '../Row';
 
 const Board = ({ fetchBoard, board, isLoading }) => {
@@ -12,16 +15,22 @@ const Board = ({ fetchBoard, board, isLoading }) => {
 
   if (isLoading) {
     return (
-      <div>
+      <Wrapper>
         Preparing game for you
-      </div>
+      </Wrapper>
     );
   }
 
   return (
-    <BoardWrapper>
-      {board.map((row, index) => (<Row row={row} key={index} />))}
-    </BoardWrapper>
+    <Wrapper>
+      <HeaderWrapper>
+        <HomeLink to="/">Home</HomeLink>
+        <RestartBtn onClick={() => fetchBoard()}>Restart</RestartBtn>
+      </HeaderWrapper>
+      <BoardWrapper>
+        {board.map((row, index) => (<Row row={row} key={index} />))}
+      </BoardWrapper>
+    </Wrapper>
   );
 };
 

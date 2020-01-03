@@ -2,22 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BoxStyled } from './Box.styled';
 
+const renderCellData = (data) => {
+  if (!data) return '';
+  if (data < 0) return 'x';
+  return data;
+};
+
 const Box = ({ box, openBox }) => {
   if (box.isOpen) {
     return (
-      <BoxStyled
-        onClick={
-          () => openBox(box.x, box.y)
-        }
-      >
-        {box.data}
+      <BoxStyled>
+        {renderCellData(box.data)}
       </BoxStyled>
     );
   }
   return (
     <BoxStyled
+      isClose
       onClick={
-        () => openBox(box.x, box.y)
+        () => openBox(box)
       }
     />
   );

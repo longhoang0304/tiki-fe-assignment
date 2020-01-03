@@ -1,8 +1,13 @@
 /* eslint-disable no-param-reassign */
-import { takeLeading, put, call } from 'redux-saga/effects';
+import {
+  takeLeading, takeEvery,
+  put, call, select,
+} from 'redux-saga/effects';
 import {
   MINESWEEPER_FETCH,
+  MINESWEEPER_OPEN,
   actions as MineSweeperActions,
+  selectors as MineSweeperSelectors,
 } from '../../reducers/minesweeper';
 import { MineSweeperApis } from '../../apis';
 
@@ -59,6 +64,28 @@ export function* handleFetchMineSweeperBoard({ size, mines }) {
   }
 }
 
+export function* handleToggleNeighbor({ box }) {
+  if (box.isOpen || box.data) return;
+
+  const board = yield select(MineSweeperSelectors.getBoard);
+  const size = board[0].length;
+  const { x, y } = box;
+
+  for (let i = -1; i < 2; i++) {
+    for (let j = -1; j < 2; j++) {
+      const xx = x - i;
+      const yy = y - j;
+
+      if (xx < 0 || xx >= size) continue;
+      if (yy < 0 || yy >= size) continue;
+      // this is a mind, don't count this :D
+      if (board[xx][yy].isOpen) continue;
+      yield put(MineSweeperActions.openBox(board[xx][yy]));
+    }
+  }
+}
+
 export default function* () {
   yield takeLeading(MINESWEEPER_FETCH, handleFetchMineSweeperBoard);
+  // yield takeEvery(MINESWEEPER_OPEN, handleToggleNeighbor);
 }

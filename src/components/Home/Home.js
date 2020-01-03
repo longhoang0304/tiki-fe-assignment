@@ -1,19 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { Wrapper, LevelBtn } from './Home.styled';
 
-const Home = () => (
-  <div>
-    <Link to="/beginner">
-      <div>
+const Home = ({ resetBoard }) => {
+  useEffect(() => {
+    resetBoard();
+    return undefined;
+  }, []);
+  return (
+    <Wrapper>
+      <LevelBtn to="/beginner">
         Beginner
-      </div>
-    </Link>
-    <Link to="/advantage">
-      <div>
+      </LevelBtn>
+      <LevelBtn to="/advantage">
         Advantage
-      </div>
-    </Link>
-  </div>
-);
+      </LevelBtn>
+    </Wrapper>
+  );
+};
+
+Home.propTypes = {
+  resetBoard: PropTypes.func.isRequired,
+};
 
 export default Home;

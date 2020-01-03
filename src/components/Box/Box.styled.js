@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const BoxStyled = styled.div`
   width: 35px;
@@ -8,4 +8,8 @@ export const BoxStyled = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  ${(props) => props.isClose && css`
+    background: #c5c9c9;
+  `}
 `;
