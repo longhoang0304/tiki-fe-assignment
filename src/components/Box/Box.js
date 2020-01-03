@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BoxStyled } from './Box.styled';
 
+const { REACT_APP_CHEAT_MODE } = process.env;
+
 const renderCellData = (data) => {
   if (!data) return '';
   if (data < 0) return 'x';
@@ -19,6 +21,7 @@ const Box = ({ box, openBox }) => {
   return (
     <BoxStyled
       isClose
+      isCheat={+REACT_APP_CHEAT_MODE && box.data < 0}
       onClick={
         () => openBox(box)
       }

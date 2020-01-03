@@ -12,4 +12,8 @@ export const BoxStyled = styled.div`
   ${(props) => props.isClose && css`
     background: #c5c9c9;
   `}
+  
+  ${(props) => props.isCheat && css`
+    background: crimson;
+  `}
 `;
