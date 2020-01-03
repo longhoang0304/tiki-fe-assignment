@@ -8,9 +8,14 @@ const AdvantageBoard = () => {
     MineSweeperActions.fetchMineSweeperAdvantageBoard,
   );
   const board = useShallowEqualSelector(MineSweeperSelectors.getBoard);
+  const isLoading = useShallowEqualSelector(MineSweeperSelectors.isLoading);
 
   return (
-    <Board board={board} fetchBoard={fetchMineSweeperAdvantageBoard} />
+    <Board
+      board={board}
+      isLoading={isLoading}
+      fetchBoard={fetchMineSweeperAdvantageBoard}
+    />
   );
 };
 
