@@ -1,6 +1,7 @@
 # Tiki FE Homework
 
-## Deployment: TBA
+## Deployment
+https://tiki-minesweeper-meow.surge.sh/
 
 ## Guide
 
