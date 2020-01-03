@@ -15,21 +15,21 @@
 
 2. Start the app
     ```
-        yarn start
+    yarn start
     ```
    or
    ```
-       npm run start
+    npm run start
    ```
    
 3. If you want to run the unit tests
 
     ```
-        yarn test
+    yarn test
     ```
    or
    ```
-       npm run test
+   npm run test
    ```
 
 ## Note   

@@ -13,15 +13,16 @@ const renderCellData = (data) => {
 const Box = ({ box, openBox }) => {
   if (box.isOpen) {
     return (
-      <BoxStyled>
+      <BoxStyled isMine={box.data < 0}>
         {renderCellData(box.data)}
       </BoxStyled>
     );
   }
+  const isMine = +REACT_APP_CHEAT_MODE && box.data < 0;
   return (
     <BoxStyled
       isClose
-      isCheat={+REACT_APP_CHEAT_MODE && box.data < 0}
+      isMine={isMine}
       onClick={
         () => openBox(box)
       }
@@ -37,6 +38,7 @@ Box.propTypes = {
     isOpen: PropTypes.bool,
   }).isRequired,
   openBox: PropTypes.func.isRequired,
+  gameStatus: PropTypes.number.isRequired,
 };
 
 export default Box;

@@ -5,7 +5,10 @@ export const MINESWEEPER_FETCH_SUCCESS = 'minesweeper/FETCH_SUCCESS';
 export const MINESWEEPER_FETCH_FAILED = 'minesweeper/FETCH_FAILED';
 
 export const MINESWEEPER_OPEN = 'minesweeper/OPEN';
+export const MINESWEEPER_OPEN_NEIGHBOR = 'minesweeper/PROCESS_OPEN_NEIGHBOR';
+
 export const MINESWEEPER_RESET = 'minesweeper/RESET';
+export const MINESWEEPER_GAME_OVER = 'minesweeper/GAME_OVER';
 
 const fetchMineSweeperBoard = (size, mines) => () => ({
   type: MINESWEEPER_FETCH,
@@ -16,9 +19,10 @@ const fetchMineSweeperBoard = (size, mines) => () => ({
 const fetchMineSweeperBeginnerBoard = fetchMineSweeperBoard(9, 10);
 const fetchMineSweeperAdvantageBoard = fetchMineSweeperBoard(16, 40);
 
-const fetchMineSweeperBoardSuccess = (board) => ({
+const fetchMineSweeperBoardSuccess = (board, mines) => ({
   type: MINESWEEPER_FETCH_SUCCESS,
   board,
+  mines,
 });
 
 const fetchMineSweeperBoardFailed = (error) => ({
@@ -31,8 +35,17 @@ const openBox = (box) => ({
   box,
 });
 
+const openNeighbor = (neighborList) => ({
+  type: MINESWEEPER_OPEN_NEIGHBOR,
+  neighborList,
+});
+
 const resetBoard = () => ({
   type: MINESWEEPER_RESET,
+});
+
+const gameOver = () => ({
+  type: MINESWEEPER_GAME_OVER,
 });
 
 export const actions = {
@@ -42,6 +55,8 @@ export const actions = {
   fetchMineSweeperBoardFailed,
   openBox,
   resetBoard,
+  openNeighbor,
+  gameOver,
 };
 
 // =========================
@@ -68,6 +83,7 @@ const initialState = {
   errorMsg: null,
   board: [],
   timer: 0,
+  mines: [],
   availableBoxes: 0,
 };
 
@@ -90,11 +106,12 @@ export default function (state = initialState, action) {
     }
 
     case MINESWEEPER_FETCH_SUCCESS: {
-      const { board } = action;
+      const { board, mines } = action;
       return {
         ...state,
         isLoading: false,
         board,
+        mines,
       };
     }
 
@@ -104,6 +121,37 @@ export default function (state = initialState, action) {
         ...state,
         isLoading: false,
         errorMsg: error,
+      };
+    }
+
+    case MINESWEEPER_OPEN_NEIGHBOR: {
+      const { neighborList } = action;
+      const { board, availableBoxes } = state;
+      const newAvailableBoxes = availableBoxes - neighborList;
+      if (newAvailableBoxes < 1) {
+        return {
+          ...state,
+          gameStatus: 2,
+          availableBoxes: 0,
+        };
+      }
+
+      const newBoard = [...board];
+
+      for (let i = 0; i < neighborList.length; i++) {
+        const currentNeighbor = neighborList[i];
+        const { x, y } = currentNeighbor;
+
+        const newBox = { ...newBoard[x][y], isOpen: true };
+        const newRow = [...newBoard[x]];
+
+        newRow[y] = newBox;
+        newBoard[x] = newRow;
+      }
+
+      return {
+        ...state,
+        board: newBoard,
       };
     }
 
@@ -158,6 +206,29 @@ export default function (state = initialState, action) {
         availableBoxes: availableBoxes - 1,
       };
     }
+
+    case MINESWEEPER_GAME_OVER: {
+      const { board, mines } = state;
+      const newBoard = [...board];
+
+      for (let i = 0; i < mines.length; i++) {
+        const currentMines = mines[i];
+        const { x, y } = currentMines;
+
+        const newBox = { ...newBoard[x][y], isOpen: true };
+        const newRow = [...newBoard[x]];
+
+        newRow[y] = newBox;
+        newBoard[x] = newRow;
+      }
+
+      return {
+        ...state,
+        board: newBoard,
+        gameStatus: 3,
+      };
+    }
+
     default: return state;
   }
 }

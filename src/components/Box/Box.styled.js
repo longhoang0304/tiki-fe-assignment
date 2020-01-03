@@ -13,7 +13,7 @@ export const BoxStyled = styled.div`
     background: #c5c9c9;
   `}
   
-  ${(props) => props.isCheat && css`
+  ${(props) => props.isMine && css`
     background: crimson;
   `}
 `;
