@@ -11,7 +11,7 @@ import {
 } from '../../reducers/minesweeper';
 import { MineSweeperApis } from '../../apis';
 
-function calculateMine(board, x, y, size) {
+export function calculateMine(board, x, y, size) {
   for (let i = -1; i < 2; i++) {
     for (let j = -1; j < 2; j++) {
       const xx = x - i;
@@ -26,7 +26,7 @@ function calculateMine(board, x, y, size) {
   return board;
 }
 
-function genBoard(size, mineMap) {
+export function genBoard(size, mineMap) {
   // init board
   const board = [...new Array(size)]
     .map(
@@ -72,7 +72,7 @@ export function* handleFetchMineSweeperBoard({ size, mines }) {
  *
  * using BFS to search for all neighbor box to open them
  */
-function findNeighbor(board, ix, iy) {
+export function findNeighbor(board, ix, iy) {
   const neighbor = {};
   const size = board[0].length;
   const q = [{ x: ix, y: iy }]; // create a queue
