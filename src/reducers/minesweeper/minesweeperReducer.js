@@ -79,7 +79,7 @@ export const selectors = {
   getErrorMsg,
 };
 
-const initialState = {
+export const initialState = {
   isLoading: false,
   gameStatus: 0, // 0 = not started, 1 = start, 2 = win, 3 = lose
   errorMsg: null,

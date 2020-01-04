@@ -31,7 +31,7 @@ describe('<Board />', () => {
   it('match snapshot', () => {
     expect(Component).toMatchSnapshot();
   });
-  it('should render 4 rows', () => {
+  it('should trigger fetchBoardMock when Restart button is clicked', () => {
     const RestartBtnComp = Component.find(RestartBtn).at(0);
     RestartBtnComp.simulate('click');
     expect(fetchBoardMock).toBeCalledTimes(1);
@@ -53,7 +53,7 @@ describe('<Board />', () => {
     });
     expect(fetchBoardMock).toBeCalledTimes(1);
   });
-  it('should trigger fetchBoardMock when Restart button is clicked', () => {
+  it('should render 4 rows', () => {
     const RowList = Component.find(Row);
     expect(RowList.length).toBe(4);
   });

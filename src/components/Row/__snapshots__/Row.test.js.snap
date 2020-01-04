@@ -1,0 +1,401 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Row /> match snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Memo()
+    row={
+      Array [
+        Object {
+          "data": 0,
+          "isOpen": false,
+          "x": 0,
+          "y": 0,
+        },
+        Object {
+          "data": 0,
+          "isOpen": false,
+          "x": 0,
+          "y": 1,
+        },
+        Object {
+          "data": 0,
+          "isOpen": false,
+          "x": 0,
+          "y": 2,
+        },
+        Object {
+          "data": 0,
+          "isOpen": false,
+          "x": 0,
+          "y": 3,
+        },
+      ]
+    }
+  >
+    <styled.div>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "kZAgjJ",
+              "rules": Array [
+                "
+  display: flex;
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <div
+          className="sc-bdVaJa kZAgjJ"
+        >
+          <BoxContainer
+            box={
+              Object {
+                "data": 0,
+                "isOpen": false,
+                "x": 0,
+                "y": 0,
+              }
+            }
+            key="0"
+          >
+            <Box
+              box={
+                Object {
+                  "data": 0,
+                  "isOpen": false,
+                  "x": 0,
+                  "y": 0,
+                }
+              }
+              gameStatus={0}
+              openBox={[Function]}
+            >
+              <styled.div
+                isClose={true}
+                isMine={0}
+                onClick={[Function]}
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "eOxqVQ",
+                        "rules": Array [
+                          "
+  width: 35px;
+  height: 35px;
+  border: 1px solid #000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  ",
+                          [Function],
+                          "
+  
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  isClose={true}
+                  isMine={0}
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-bwzfXH eOxqVQ"
+                    onClick={[Function]}
+                  />
+                </StyledComponent>
+              </styled.div>
+            </Box>
+          </BoxContainer>
+          <BoxContainer
+            box={
+              Object {
+                "data": 0,
+                "isOpen": false,
+                "x": 0,
+                "y": 1,
+              }
+            }
+            key="1"
+          >
+            <Box
+              box={
+                Object {
+                  "data": 0,
+                  "isOpen": false,
+                  "x": 0,
+                  "y": 1,
+                }
+              }
+              gameStatus={0}
+              openBox={[Function]}
+            >
+              <styled.div
+                isClose={true}
+                isMine={0}
+                onClick={[Function]}
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "eOxqVQ",
+                        "rules": Array [
+                          "
+  width: 35px;
+  height: 35px;
+  border: 1px solid #000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  ",
+                          [Function],
+                          "
+  
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  isClose={true}
+                  isMine={0}
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-bwzfXH eOxqVQ"
+                    onClick={[Function]}
+                  />
+                </StyledComponent>
+              </styled.div>
+            </Box>
+          </BoxContainer>
+          <BoxContainer
+            box={
+              Object {
+                "data": 0,
+                "isOpen": false,
+                "x": 0,
+                "y": 2,
+              }
+            }
+            key="2"
+          >
+            <Box
+              box={
+                Object {
+                  "data": 0,
+                  "isOpen": false,
+                  "x": 0,
+                  "y": 2,
+                }
+              }
+              gameStatus={0}
+              openBox={[Function]}
+            >
+              <styled.div
+                isClose={true}
+                isMine={0}
+                onClick={[Function]}
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "eOxqVQ",
+                        "rules": Array [
+                          "
+  width: 35px;
+  height: 35px;
+  border: 1px solid #000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  ",
+                          [Function],
+                          "
+  
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  isClose={true}
+                  isMine={0}
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-bwzfXH eOxqVQ"
+                    onClick={[Function]}
+                  />
+                </StyledComponent>
+              </styled.div>
+            </Box>
+          </BoxContainer>
+          <BoxContainer
+            box={
+              Object {
+                "data": 0,
+                "isOpen": false,
+                "x": 0,
+                "y": 3,
+              }
+            }
+            key="3"
+          >
+            <Box
+              box={
+                Object {
+                  "data": 0,
+                  "isOpen": false,
+                  "x": 0,
+                  "y": 3,
+                }
+              }
+              gameStatus={0}
+              openBox={[Function]}
+            >
+              <styled.div
+                isClose={true}
+                isMine={0}
+                onClick={[Function]}
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "eOxqVQ",
+                        "rules": Array [
+                          "
+  width: 35px;
+  height: 35px;
+  border: 1px solid #000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  ",
+                          [Function],
+                          "
+  
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  isClose={true}
+                  isMine={0}
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-bwzfXH eOxqVQ"
+                    onClick={[Function]}
+                  />
+                </StyledComponent>
+              </styled.div>
+            </Box>
+          </BoxContainer>
+        </div>
+      </StyledComponent>
+    </styled.div>
+  </Memo()>
+</Provider>
+`;

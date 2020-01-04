@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> match snapshot 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Modal
+      duration="00:00:00"
+      fetchBoard={[MockFunction]}
+      gameStatus={2}
+      isOpen={true}
+    >
+      <styled.div
+        isOpen={true}
+      >
+        <StyledComponent
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bdVaJa",
+                "isStatic": false,
+                "lastClassName": "cNSmUR",
+                "rules": Array [
+                  "
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0px;
+  left: 0px;
+  color: #fff;
+  font-size: 24px;
+  
+  ",
+                  [Function],
+                  "
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bdVaJa",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          isOpen={true}
+        >
+          <div
+            className="sc-bdVaJa cNSmUR"
+          >
+            <div>
+              You won the game in 00:00:00
+            </div>
+            <styled.button
+              onClick={[Function]}
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": false,
+                      "lastClassName": "dqivxj",
+                      "rules": Array [
+                        "
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  background: unset;
+  border: unset;
+  outline: unset;
+  color: #fff;
+  
+  &:hover {
+    cursor:pointer;
+    text-decoration: underline;
+  }
+",
+                      ],
+                    },
+                    "displayName": "styled.button",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": "button",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                onClick={[Function]}
+              >
+                <button
+                  className="sc-bwzfXH dqivxj"
+                  onClick={[Function]}
+                >
+                  New Game
+                </button>
+              </StyledComponent>
+            </styled.button>
+            <Styled(Link)
+              to="/"
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-htpNat",
+                      "isStatic": false,
+                      "lastClassName": "khMNoN",
+                      "rules": Array [
+                        "
+  color: #fff;
+  text-decoration: none;
+  
+  &:hover {
+    cursor:pointer;
+    text-decoration: underline;
+  }
+",
+                      ],
+                    },
+                    "displayName": "Styled(Link)",
+                    "foldedComponentIds": Array [],
+                    "propTypes": Object {
+                      "innerRef": [Function],
+                      "onClick": [Function],
+                      "replace": [Function],
+                      "target": [Function],
+                      "to": [Function],
+                    },
+                    "render": [Function],
+                    "styledComponentId": "sc-htpNat",
+                    "target": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "displayName": "Link",
+                      "propTypes": Object {
+                        "innerRef": [Function],
+                        "onClick": [Function],
+                        "replace": [Function],
+                        "target": [Function],
+                        "to": [Function],
+                      },
+                      "render": [Function],
+                    },
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                to="/"
+              >
+                <Link
+                  className="sc-htpNat khMNoN"
+                  to="/"
+                >
+                  <LinkAnchor
+                    className="sc-htpNat khMNoN"
+                    href="/"
+                    navigate={[Function]}
+                  >
+                    <a
+                      className="sc-htpNat khMNoN"
+                      href="/"
+                      onClick={[Function]}
+                    >
+                      Home Page
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </StyledComponent>
+            </Styled(Link)>
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </Modal>
+  </Router>
+</BrowserRouter>
+`;

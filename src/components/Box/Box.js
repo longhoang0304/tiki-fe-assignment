@@ -38,7 +38,6 @@ Box.propTypes = {
     isOpen: PropTypes.bool,
   }).isRequired,
   openBox: PropTypes.func.isRequired,
-  gameStatus: PropTypes.number.isRequired,
 };
 
 export default Box;

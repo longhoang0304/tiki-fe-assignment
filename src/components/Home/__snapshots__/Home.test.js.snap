@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> match snapshot 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Home
+      resetBoard={[MockFunction]}
+    >
+      <styled.div>
+        <StyledComponent
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bdVaJa",
+                "isStatic": false,
+                "lastClassName": "bEeQEn",
+                "rules": Array [
+                  "
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bdVaJa",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <div
+            className="sc-bdVaJa bEeQEn"
+          >
+            <Styled(Link)
+              to="/beginner"
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": false,
+                      "lastClassName": "gHlQFz",
+                      "rules": Array [
+                        "
+  color: #000;
+  margin-bottom: 25px;
+  text-decoration: none;
+  font-size: 24px;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+",
+                      ],
+                    },
+                    "displayName": "Styled(Link)",
+                    "foldedComponentIds": Array [],
+                    "propTypes": Object {
+                      "innerRef": [Function],
+                      "onClick": [Function],
+                      "replace": [Function],
+                      "target": [Function],
+                      "to": [Function],
+                    },
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "displayName": "Link",
+                      "propTypes": Object {
+                        "innerRef": [Function],
+                        "onClick": [Function],
+                        "replace": [Function],
+                        "target": [Function],
+                        "to": [Function],
+                      },
+                      "render": [Function],
+                    },
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                to="/beginner"
+              >
+                <Link
+                  className="sc-bwzfXH gHlQFz"
+                  to="/beginner"
+                >
+                  <LinkAnchor
+                    className="sc-bwzfXH gHlQFz"
+                    href="/beginner"
+                    navigate={[Function]}
+                  >
+                    <a
+                      className="sc-bwzfXH gHlQFz"
+                      href="/beginner"
+                      onClick={[Function]}
+                    >
+                      Beginner
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </StyledComponent>
+            </Styled(Link)>
+            <Styled(Link)
+              to="/advantage"
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": false,
+                      "lastClassName": "gHlQFz",
+                      "rules": Array [
+                        "
+  color: #000;
+  margin-bottom: 25px;
+  text-decoration: none;
+  font-size: 24px;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+",
+                      ],
+                    },
+                    "displayName": "Styled(Link)",
+                    "foldedComponentIds": Array [],
+                    "propTypes": Object {
+                      "innerRef": [Function],
+                      "onClick": [Function],
+                      "replace": [Function],
+                      "target": [Function],
+                      "to": [Function],
+                    },
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "displayName": "Link",
+                      "propTypes": Object {
+                        "innerRef": [Function],
+                        "onClick": [Function],
+                        "replace": [Function],
+                        "target": [Function],
+                        "to": [Function],
+                      },
+                      "render": [Function],
+                    },
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                to="/advantage"
+              >
+                <Link
+                  className="sc-bwzfXH gHlQFz"
+                  to="/advantage"
+                >
+                  <LinkAnchor
+                    className="sc-bwzfXH gHlQFz"
+                    href="/advantage"
+                    navigate={[Function]}
+                  >
+                    <a
+                      className="sc-bwzfXH gHlQFz"
+                      href="/advantage"
+                      onClick={[Function]}
+                    >
+                      Advantage
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </StyledComponent>
+            </Styled(Link)>
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </Home>
+  </Router>
+</BrowserRouter>
+`;

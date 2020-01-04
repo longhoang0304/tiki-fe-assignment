@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box /> match snapshot 1`] = `
+<Box
+  box={
+    Object {
+      "data": 0,
+      "isOpen": false,
+      "x": 1,
+      "y": 1,
+    }
+  }
+  openBox={[MockFunction]}
+>
+  <styled.div
+    isClose={true}
+    isMine={0}
+    onClick={[Function]}
+  >
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "kfvIne",
+            "rules": Array [
+              "
+  width: 35px;
+  height: 35px;
+  border: 1px solid #000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  ",
+              [Function],
+              "
+  
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isClose={true}
+      isMine={0}
+      onClick={[Function]}
+    >
+      <div
+        className="sc-bdVaJa kfvIne"
+        onClick={[Function]}
+      />
+    </StyledComponent>
+  </styled.div>
+</Box>
+`;
